@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import Input from './Input';
+import styles from './general.module.css';
 
-export default function GeneralForm () {
+export default function GeneralInfo () {
   const [name, setName] = useState('Joe Burrow');
   const [email, setEmail] = useState('jburrow@bengals.com');
   const [number, setNumber] = useState('123-456-7890');
@@ -22,19 +23,10 @@ export default function GeneralForm () {
   }
   return (
     <div>
+      <h2 className='title'>General Information</h2>
       <Input handleChange={handleChange} value={name} name='name'/>
       <Input handleChange={handleChange} value={email} name='email' />
       <Input handleChange={handleChange} value={number} name='number' />
     </div>
   )
-  // return (
-  //   <form>
-  //     <label htmlFor='name'>Name:</label>
-  //     <input type='text' value={name} id='name' placeholder='Joe Burrow' />
-  //     <label htmlFor='email'>Email Address:</label>
-  //     <input type='email' value={email} id='email' placeholder='jburrow@bengals.com' />
-  //     <label htmlFor='number'>Phone Number:</label>
-  //     <input type='text' value={phoneNumber} id='number' placeholder='123-456-7890' />
-  //   </form>
-  // )
 }
