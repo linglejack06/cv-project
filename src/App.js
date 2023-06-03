@@ -1,8 +1,8 @@
 import './App.css';
-
+import GeneralForm from './components/GeneralInfo';
 function App() {
   return (
-    <h1>Hi</h1>
+    <GeneralForm name='' email='' phoneNumber='' />
   );
 }
 
